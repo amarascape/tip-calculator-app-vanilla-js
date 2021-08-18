@@ -60,6 +60,9 @@ input[type="number" i] {
   color: var(--Very-dark-cyan);
   font-weight: var(--bold-weight);
   border-radius: 0.5rem;
+  height: 50px;
+  max-height: 50px;
+  min-height: 50px;
 }
 
 input[type="number" i]:hover {
@@ -226,4 +229,15 @@ input[type="reset"] {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* || RESPONSIVE DESIGN: DESKTOP */
+@media screen and (min-width: 1000px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .totalAmountPerPerson {
+    padding-bottom: 9rem;
+  }
 }
