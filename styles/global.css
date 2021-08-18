@@ -149,17 +149,15 @@ section {
 /* || TIP AMOUNTS OUTPUT */
 
 .tipAmountPerPerson {
-  margin-bottom: 2rem;
-}
-
-.tipAmountPerPerson {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
 }
 
 .totalAmountPerPerson {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
 }
 
 .mainHeading {
@@ -189,6 +187,14 @@ section {
   font-size: 2.5rem;
   color: var(--Strong-cyan);
   font-weight: var(--bold-weight);
+}
+
+/* || RESET BUTTON */
+
+input[type="reset"] {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  border-radius: 0.5rem;
 }
 
 /* || ATTRIBUTION */
