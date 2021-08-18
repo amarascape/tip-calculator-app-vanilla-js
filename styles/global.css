@@ -88,6 +88,10 @@ section {
   text-align: right;
 }
 
+.bill {
+  margin-bottom: 2rem;
+}
+
 /* || NUMBER OF PEOPLE */
 
 .numberOfPeople input {
@@ -100,12 +104,53 @@ section {
 
 /* || TIP PERCENTS */
 
+.tipPercent {
+  margin-bottom: 2rem;
+}
+
 .buttonInput {
   background-color: var(--Very-dark-cyan);
   color: var(--White);
 }
 
+.buttonInput:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.buttonInputSelected {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.customInput {
+  text-align: right;
+}
+
+.tipPercentsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.tipPercentsList input {
+  border-radius: 0.5rem;
+}
+
+/* || CALCULATIONS OUTPUT */
+
+.calculationsOutput {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
 /* || TIP AMOUNTS OUTPUT */
+
+.tipAmountPerPerson {
+  margin-bottom: 2rem;
+}
 
 .tipAmountPerPerson {
   display: grid;
@@ -122,6 +167,8 @@ section {
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
+  font-size: 1rem;
+  color: var(--White);
 }
 
 .subHeading {
@@ -129,11 +176,19 @@ section {
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
+  font-size: 1rem;
 }
 
+.label {
+  justify-self: left;
+  align-self: center;
+}
 .output {
   justify-self: center;
   align-self: center;
+  font-size: 2.5rem;
+  color: var(--Strong-cyan);
+  font-weight: var(--bold-weight);
 }
 
 /* || ATTRIBUTION */
