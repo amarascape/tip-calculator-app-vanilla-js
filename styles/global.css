@@ -4,7 +4,7 @@
   --Very-dark-cyan: hsl(183, 100%, 15%);
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
   --Dark-grayish-cyan: hsl(184, 14%, 56%);
-  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Grayish-cyan: hsl(185, 41%, 84%);
   --Light-grayish-cyan: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
   /* font weights */
@@ -20,13 +20,17 @@
 /* || GLOBAL STYLES */
 
 body {
+  min-width: 420px;
+}
+
+body {
   font-family: var(--normal-font-family);
   font-size: var(--normal-size);
   font-weight: var(--normal-weight);
 }
 
 body {
-  background-color: var(--Strong-cyan);
+  background-color: var(--Grayish-cyan);
 }
 
 body {
@@ -55,6 +59,22 @@ input[type="number" i] {
   background-color: var(--Light-grayish-cyan);
   color: var(--Very-dark-cyan);
   font-weight: var(--bold-weight);
+  border-radius: 0.5rem;
+}
+
+input[type="number" i]:hover {
+  outline: none;
+  border: 0.2rem solid var(--Strong-cyan);
+}
+
+input[type="number" i]:focus {
+  outline: none;
+  border: 0.2rem solid var(--Strong-cyan);
+}
+
+input[type="number" i]:invalid {
+  outline: none;
+  border: 0.2rem solid red;
 }
 
 ul {
@@ -114,7 +134,7 @@ section {
 }
 
 .buttonInput:hover {
-  background-color: var(--Strong-cyan);
+  background-color: var(--Grayish-cyan);
   color: var(--Very-dark-cyan);
 }
 
