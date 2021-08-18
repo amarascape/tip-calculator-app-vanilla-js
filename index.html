@@ -15,6 +15,10 @@
   <title>Frontend Mentor | Tip calculator app</title>
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="styles/global.css">
+  <!-- Custom JavaScript -->
+  <script src="components/Form.js"></script>
+  <!-- JavaScript: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,34 +31,34 @@
         <section class="inputs">
           <div class="bill">
             <h1 class="heading billHeading">Bill</h1>
-            <input type="number" min="0.00" max="10000.00" step="0.01" />
+            <input type="number" oninput="attemptCompute()" min="0.00" max="10000.00" step="0.01" />
           </div>
           <div class="tipPercent">
             <h1 class="heading tipPercentHeading">Select Tip %</h1>
             <ul class="tipPercentsList">
               <li>
-                <input class="buttonInput" type="button" value="5%">
+                <input class="buttonInput" type="button" onclick="toggleSelected(event)" value="5%">
               </li>
               <li>
-                <input class="buttonInput" type="button" value="10%">
+                <input class="buttonInput" type="button" onclick="toggleSelected(event)" value="10%">
               </li>
               <li>
-                <input class="buttonInput" type="button" value="15%">
+                <input class="buttonInput" type="button" onclick="toggleSelected(event)" value="15%">
               </li>
               <li>
-                <input class="buttonInput" type="button" value="25%">
+                <input class="buttonInput" type="button" onclick="toggleSelected(event)" value="25%">
               </li>
               <li>
-                <input class="buttonInput" type="button" value="50%">
+                <input class="buttonInput" type="button" onclick="toggleSelected(event)" value="50%">
               </li>
               <li>
-                <input class="customInput" type="number" min="1" max="100" step="1" placeholder="Custom" min="0" max="100" step="1" />
+                <input class="customInput" type="number" oninput="readSelected(event)" min="1" max="100" step="1" placeholder="Custom" min="0" max="100" step="1" />
               </li>
             </ul>
           </div>
           <div class="numberOfPeople">
             <h1 class="heading numberOfPeopleHeading">Number of People</h1>
-            <input type="number" min="1" max="100" step="1" />
+            <input type="number" oninput="attemptCompute()" min="1" max="100" step="1" />
           </div>
         </section>
       </div>
@@ -90,8 +94,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>
