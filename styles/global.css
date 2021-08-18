@@ -150,6 +150,10 @@ section {
   text-align: right;
 }
 
+.customInputSelected {
+  border: 0.2rem solid var(--Strong-cyan);
+}
+
 .tipPercentsList {
   display: grid;
   grid-template-columns: 1fr 1fr;

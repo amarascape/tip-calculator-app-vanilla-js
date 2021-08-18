@@ -30,7 +30,18 @@ function getSelectedTipPercentAsDecimal(tipAsString) {
  * and calls the attemptCompute() method.
  */
 function toggleSelected(event) {
-  let previousSelected = document.querySelector(".buttonInputSelected");
+  let previousSelected;
+
+  //if previous selection was custom
+  previousSelected = document.querySelector(".customInput");
+  if (previousSelected === null) {
+    //do nothing
+  } else if (previousSelected.classList.contains("customInputSelected")) {
+    previousSelected.classList.remove("customInputSelected");
+  }
+
+  //if previous selection was a button
+  previousSelected = document.querySelector(".buttonInputSelected");
   if (previousSelected === null) {
     //do nothing
   } else {
@@ -50,6 +61,25 @@ function toggleSelected(event) {
  * and calls the attemptCompute() method.
  */
 function readSelected(event) {
+  let target = event.target;
+  target.classList.add("customInputSelected");
+
+  //remove selected styling from button
+  let previousSelected = document.querySelector(".buttonInputSelected");
+  console.log("attemptiong to remove styling from", previousSelected);
+  if (previousSelected === null) {
+    console.log("failed to remove styling from", previousSelected);
+    //do nothing
+  } else {
+    console.log("successfully removed styling from", previousSelected);
+    previousSelected.classList.remove("buttonInputSelected");
+  }
+
+  tipPercent = "custom";
+  attemptCompute();
+}
+
+function readCustomTip() {
   tipPercent = "custom";
   attemptCompute();
 }
