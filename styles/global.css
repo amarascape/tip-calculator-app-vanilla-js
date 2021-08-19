@@ -245,6 +245,6 @@ input[type="reset"] {
     padding-bottom: 9rem;
   }
   main {
-    width: auto;
+    width: 80%;
   }
 }

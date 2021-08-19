@@ -97,7 +97,7 @@ function attemptCompute() {
 
   if (billAmountValid() && tipPercentValid() && numberOfPeopleValid()) {
     let tipPerPerson = (billAmount * tipPercent) / numberOfPeople;
-    let totalPerPerson = billAmount / numberOfPeople;
+    let totalPerPerson = billAmount / numberOfPeople + tipPerPerson;
 
     document.querySelector(
       ".tipAmountPerPerson .output"
