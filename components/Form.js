@@ -57,7 +57,9 @@ function toggleSelected(event) {
 
 /**
  * onclick method for custom input for tip percents.
- * Sets tipPercent as "custom",
+ * Adds class "customInputSelected" for styling,
+ * removes styling from previously selected button,
+ * sets tipPercent as "custom",
  * and calls the attemptCompute() method.
  */
 function readSelected(event) {
@@ -66,20 +68,12 @@ function readSelected(event) {
 
   //remove selected styling from button
   let previousSelected = document.querySelector(".buttonInputSelected");
-  console.log("attemptiong to remove styling from", previousSelected);
   if (previousSelected === null) {
-    console.log("failed to remove styling from", previousSelected);
     //do nothing
   } else {
-    console.log("successfully removed styling from", previousSelected);
     previousSelected.classList.remove("buttonInputSelected");
   }
 
-  tipPercent = "custom";
-  attemptCompute();
-}
-
-function readCustomTip() {
   tipPercent = "custom";
   attemptCompute();
 }
@@ -102,9 +96,7 @@ function attemptCompute() {
   }
 
   if (billAmountValid() && tipPercentValid() && numberOfPeopleValid()) {
-    console.log("calculating...");
     let tipPerPerson = (billAmount * tipPercent) / numberOfPeople;
-    console.log("tipPerPerson", tipPerPerson);
     let totalPerPerson = billAmount / numberOfPeople;
 
     document.querySelector(
@@ -118,34 +110,25 @@ function attemptCompute() {
 }
 
 function billAmountValid() {
-  console.log("validating billAmount", billAmount);
   if (billAmount >= 0.0 && billAmount <= 10000.0) {
-    console.log("validated billAmount");
     return true;
   } else {
-    console.log("failed to validate billAmount");
     return false;
   }
 }
 
 function tipPercentValid() {
-  console.log("validating tipPercent", tipPercent);
   if (tipPercent >= 0 && tipPercent <= 1) {
-    console.log("validated tipPercent");
     return true;
   } else {
-    console.log("failed to validate tipPercent");
     return false;
   }
 }
 
 function numberOfPeopleValid() {
-  console.log("validating numberOfPeople", numberOfPeople);
   if (numberOfPeople >= 1 && numberOfPeople <= 100) {
-    console.log("validated numberOfPeople");
     return true;
   } else {
-    console.log("failed to validate numberOfPeople");
     return false;
   }
 }
