@@ -56,7 +56,7 @@ function toggleSelected(event) {
 }
 
 /**
- * onclick method for custom input for tip percents.
+ * onclick and oninput method for custom input for tip percents.
  * Adds class "customInputSelected" for styling,
  * removes styling from previously selected button,
  * sets tipPercent as "custom",
