@@ -244,4 +244,7 @@ input[type="reset"] {
   .totalAmountPerPerson {
     padding-bottom: 9rem;
   }
+  main {
+    width: auto;
+  }
 }
