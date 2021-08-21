@@ -64,18 +64,23 @@ function toggleSelected(event) {
  */
 function readSelected(event) {
   let target = event.target;
-  target.classList.add("customInputSelected");
 
-  //remove selected styling from button
-  let previousSelected = document.querySelector(".buttonInputSelected");
-  if (previousSelected === null) {
+  if (target.value === "") {
     //do nothing
   } else {
-    previousSelected.classList.remove("buttonInputSelected");
-  }
+    target.classList.add("customInputSelected");
 
-  tipPercent = "custom";
-  attemptCompute();
+    //remove selected styling from button
+    let previousSelected = document.querySelector(".buttonInputSelected");
+    if (previousSelected === null) {
+      //do nothing
+    } else {
+      previousSelected.classList.remove("buttonInputSelected");
+    }
+
+    tipPercent = "custom";
+    attemptCompute();
+  }
 }
 
 /**
@@ -131,4 +136,36 @@ function numberOfPeopleValid() {
   } else {
     return false;
   }
+}
+
+/**
+ * Resets the form on the page,
+ * removes any selection styling from tip percent inputs
+ * and sets both calculation outputs back to ???.???
+ */
+function fullReset() {
+  let form = document.querySelector("form");
+  form.reset();
+
+  //remove selected styling from button
+  let previousSelected = document.querySelector(".buttonInputSelected");
+  if (previousSelected === null) {
+    //do nothing
+  } else {
+    previousSelected.classList.remove("buttonInputSelected");
+  }
+
+  //if previous selection was custom
+  previousSelected = document.querySelector(".customInput");
+  if (previousSelected === null) {
+    //do nothing
+  } else if (previousSelected.classList.contains("customInputSelected")) {
+    previousSelected.classList.remove("customInputSelected");
+  }
+
+  tipPercent = 9999999999;
+
+  document.querySelector(".tipAmountPerPerson .output").innerText = "???.???";
+
+  document.querySelector(".totalAmountPerPerson .output").innerText = "???.???";
 }

@@ -235,6 +235,16 @@ input[type="reset"] {
   color: hsl(228, 45%, 44%);
 }
 
+/* 
+ not work when the browser is made smaller
+ in effect, it functions as a 'sticky' footer
+ */
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 /* || RESPONSIVE DESIGN: DESKTOP */
 @media screen and (min-width: 1000px) {
   form {

@@ -31,7 +31,7 @@
         <section class="inputs">
           <div class="bill">
             <h1 class="heading billHeading">Bill</h1>
-            <input type="number" oninput="attemptCompute()" min="0.00" max="10000.00" step="0.01" />
+            <input type="number" oninput="attemptCompute()" min="0.01" max="10000.00" step="0.01" />
           </div>
           <div class="tipPercent">
             <h1 class="heading tipPercentHeading">Select Tip %</h1>
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="resetButton">
-            <input type="reset" value="Reset">
+            <input type="reset" value="Reset" onclick="fullReset()">
           </div>
         </section>
       </div>
